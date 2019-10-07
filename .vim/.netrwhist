@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/eys-140/eys/eys-musicschool.com/public_html/course_instrument/other/writer'
+let g:netrw_dirhist_2='/Users/eys-140/eys/eys-musicschool.com/public_html/course_instrument/other/dtm'
+let g:netrw_dirhist_3='/Users/eys-140/eys/eys-musicschool.com/public_html/course_vocal/personal'
+let g:netrw_dirhist_4='/Users/eys-140/eys/eys-musicschool.com/public_html/course_vocal/personal/dance_vocal'
+let g:netrw_dirhist_5='/Users/eys-140/eys/eys-musicschool.com/public_html/course_vocal/personal/voice_percussion'
+let g:netrw_dirhist_6='/Users/eys-140/eys/eys-musicschool.com/public_html/sp/include'
+let g:netrw_dirhist_7='/Users/eys-140/eys/eys-musicschool.com/public_html/course_instrument/japanese/japanese_drum'
