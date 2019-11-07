@@ -41,13 +41,20 @@ syntax enable
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
+set list
+set listchars=tab:\▸\-,eol:↲
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
+
+" 改行コードをUNIXモードで開く
+set fileformats=unix
+
+" 改行コードを自動判別する
+" set fileformats=unix,dos,mac
 
 
 " 検索系
@@ -67,7 +74,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " INSERTモードで色を変える
 augroup InsertHook
     autocmd!
-    autocmd InsertEnter * hi Normal ctermbg=236 ctermfg=none "挿入モード時の色
+    autocmd InsertEnter * hi Normal ctermbg=237 ctermfg=none "挿入モード時の色
     autocmd InsertLeave * hi Normal ctermbg=0 ctermfg=none "通常モード時の色
 augroup END
 
@@ -106,3 +113,5 @@ highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 
+" jjでESC
+inoremap <silent> jj <ESC>

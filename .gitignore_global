@@ -3,3 +3,11 @@
 .LSOverride
 
 *.bak
+*.orig
+
+
+# personal
+
+# 開発環境　9030番music、9031番kids
+docker-compose.yml
+
