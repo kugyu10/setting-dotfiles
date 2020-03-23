@@ -133,3 +133,5 @@ nnoremap zn :cnext<CR>       " 次へ
 nnoremap zB :<C-u>cfirst<CR> " 最初へ
 nnoremap zN :<C-u>clast<CR>  " 最後へ
 
+" BS効かない時防止
+set backspace=indent,eol,start
