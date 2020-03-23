@@ -42,7 +42,7 @@ syntax enable
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
 set list
-set listchars=tab:\▸\-,eol:↲
+set listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -51,10 +51,10 @@ set tabstop=2
 set shiftwidth=2
 
 " 改行コードをUNIXモードで開く
-set fileformats=unix
+" set fileformats=unix
 
 " 改行コードを自動判別する
-" set fileformats=unix,dos,mac
+set fileformats=unix,dos,mac
 
 
 " 検索系
@@ -115,3 +115,21 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 
 " jjでESC
 inoremap <silent> jj <ESC>
+
+
+" 削除のみ
+vnoremap d "_d
+nnoremap d "_d
+vnoremap D "_D
+nnoremap D "_D
+vnoremap x "_x
+nnoremap x "_x
+nnoremap c "_c
+vnoremap c "_c
+
+" vimgrep用
+nnoremap zb :cprevious<CR>   " 前へ
+nnoremap zn :cnext<CR>       " 次へ
+nnoremap zB :<C-u>cfirst<CR> " 最初へ
+nnoremap zN :<C-u>clast<CR>  " 最後へ
+
