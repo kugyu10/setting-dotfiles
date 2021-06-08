@@ -38,11 +38,25 @@ nnoremap k gk
 " シンタックスハイライトの有効化
 syntax enable
 
+"タブ、空白、改行の可視化
+set list
+set listchars=tab:--,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+
+"全角スペースをハイライト表示
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+   
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
 
 " Tab系
-" 不可視文字を可視化(タブが「▸-」と表示される)
-set list
-set listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -135,3 +149,10 @@ nnoremap zN :<C-u>clast<CR>  " 最後へ
 
 " BS効かない時防止
 set backspace=indent,eol,start
+
+" 大文字小文字の誤爆を防ぐ
+vnoremap u <Nop>
+vnoremap U <Nop>
+noremap gu <Nop>
+noremap gU <Nop>
+

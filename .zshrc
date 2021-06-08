@@ -45,3 +45,4 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 eval "$(rbenv init -)"
 
+export PATH=$PATH:/Users/xxxxx/.nodebrew/current/bin
