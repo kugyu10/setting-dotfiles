@@ -1,0 +1,55 @@
+cd ~
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/kugyu10/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kugyu10/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew -v
+brew install git
+git -v
+git --version
+brew install node
+node -v
+mkdir Markdown
+git clone https://github.com/kugyu10/setting-dotfiles.git
+ls
+mv setting-dotfiles dotfiles
+ls
+ls -a
+vim .vscode
+ls -a dotfiles
+mv .vscode dotfiles
+ls
+ls -a dotfiles
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ls -a
+ls -la
+rm .zprofile
+mv .zsh_sessions dotfiles
+ls
+ls -a
+ll -a
+ls -la
+rm .vim
+ls -a dotfiles
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.gvimrc ~/.gvimrc
+ln -s ~/dotfiles/.vscode ~/.vscode
+ln -s ~/dotfiles/.zsh_sessions ~/.zsh_sessions
+ln -s ~/dotfiles/zprofile ~/zprofile
+ln -s ~/dotfiles/.git ~/.git
+ln -s ~/dotfiles/.vim/ ~/.vim/
+ln -s ~/dotfiles/.zprofile ~/.zprofile
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+rm ~/.vimrc
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.zsh_profile ~/.zsh_profile
+vim zprofile
+vim .zprofile
+vim zprofile
+rm zprofile
+rm dotfiles/zprofile
+ls
+exit
